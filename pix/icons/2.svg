@@ -1,0 +1,66 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 357 281" style="enable-background:new 0 0 357 281;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.4;fill:#808080;}
+	.st1{fill:#8AC1CB;}
+	.st2{fill:#F4F4F4;}
+	.st3{fill:#C1272D;}
+	.st4{fill:#FFE000;}
+	.st5{fill:#64FF00;}
+	.st6{fill:#C1E551;}
+	.st7{fill:#FFE669;}
+	.st8{fill:#FF8F43;}
+	.st9{fill:#6D7A7D;}
+	.st10{fill:#E486EA;}
+	.st11{fill:#7B30E5;}
+	.st12{fill:#F2EB72;}
+	.st13{fill:#5C67AA;}
+</style>
+<g id="окно">
+	<rect id="тень" x="2.5" y="1" class="st0" width="353.2" height="276.9"/>
+	<rect x="0.5" y="6.3" class="st1" width="350.9" height="259.6"/>
+	<rect x="0.5" y="20.3" class="st2" width="350.9" height="259.6"/>
+	<g id="Слой_4">
+		<path class="st3" d="M10,18L10,18c2.8,0,5-2.2,5-5v0c0-2.8-2.2-5-5-5h0c-2.8,0-5,2.2-5,5v0C5,15.8,7.2,18,10,18z"/>
+		<path class="st4" d="M23,18L23,18c2.8,0,5-2.2,5-5v0c0-2.8-2.2-5-5-5h0c-2.8,0-5,2.2-5,5v0C18,15.8,20.2,18,23,18z"/>
+		<path class="st5" d="M36,18L36,18c2.8,0,5-2.2,5-5v0c0-2.8-2.2-5-5-5h0c-2.8,0-5,2.2-5,5v0C31,15.8,33.2,18,36,18z"/>
+	</g>
+</g>
+<g id="Слой_1">
+	<g id="содержимое_сайта_1_">
+		<rect x="46" y="33" class="st6" width="264" height="20"/>
+		<rect x="18" y="68" class="st7" width="85" height="28"/>
+		<rect x="18" y="106" class="st8" width="85" height="28"/>
+		<rect x="114" y="68" class="st9" width="219" height="7"/>
+		<rect x="114" y="88" class="st9" width="219" height="7"/>
+		<rect x="114" y="78" class="st9" width="219" height="7"/>
+		<rect x="114" y="107" class="st9" width="219" height="7"/>
+		<rect x="114" y="127" class="st9" width="219" height="7"/>
+		<rect x="114" y="117" class="st9" width="219" height="7"/>
+		<rect x="18" y="159" class="st10" width="53" height="53"/>
+		<rect x="18" y="225" class="st9" width="38" height="6"/>
+		<rect x="18" y="237" class="st9" width="53" height="6"/>
+		<rect x="18" y="249" class="st9" width="53" height="6"/>
+		<rect x="18" y="261" class="st9" width="48" height="6"/>
+		<rect x="280" y="158" class="st11" width="53" height="53"/>
+		<rect x="311" y="224" class="st9" width="22" height="6"/>
+		<rect x="280" y="224" class="st9" width="22" height="6"/>
+		<rect x="280" y="236" class="st9" width="53" height="6"/>
+		<rect x="280" y="248" class="st9" width="53" height="6"/>
+		<rect x="280" y="260" class="st9" width="22" height="6"/>
+		<rect x="107" y="159" class="st12" width="53" height="53"/>
+		<rect x="107" y="225" class="st9" width="53" height="6"/>
+		<rect x="107" y="237" class="st9" width="22" height="6"/>
+		<rect x="138" y="237" class="st9" width="22" height="6"/>
+		<rect x="107" y="249" class="st9" width="53" height="6"/>
+		<rect x="107" y="261" class="st9" width="53" height="6"/>
+		<rect x="193" y="157" class="st13" width="53" height="53"/>
+		<rect x="193" y="223" class="st9" width="53" height="6"/>
+		<rect x="193" y="235" class="st9" width="53" height="6"/>
+		<rect x="213" y="247" class="st9" width="33" height="6"/>
+		<rect x="193" y="259" class="st9" width="44" height="6"/>
+		<rect x="60" y="225" class="st9" width="11" height="6"/>
+		<rect x="193" y="247" class="st9" width="11" height="6"/>
+	</g>
+</g>
+</svg>

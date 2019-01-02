@@ -1,0 +1,18 @@
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 363 254" style="enable-background:new 0 0 363 254;" xml:space="preserve">
+<g id="тень_1_">
+	<rect x="2.5" y="2.5" class="st0" width="361" height="252"/>
+</g>
+<g id="Слой_2">
+	<rect x="-0.5" y="-0.5" class="st1" width="361" height="252"/>
+</g>
+<g id="низ">
+	<polygon class="st2" points="0,252 361,252 180,126 	"/>
+</g>
+<g id="тень">
+	<polygon class="st3" points="0,0 180,160 361,0 180,150 	"/>
+</g>
+<g id="верх">
+	<polygon class="st2" points="0,0 180,149 361,0 	"/>
+</g>
+</svg>

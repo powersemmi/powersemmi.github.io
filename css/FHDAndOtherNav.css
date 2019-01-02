@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/**
+ * Переключаемая боковая панель навигации
+ * выдвигающаяся по клику слева
+ */
+/* Font connnect*/
+@font-face {
+  font-family: "BowlbyOne Regular";
+  src: url("../font/eot/BowlbyOne-Regular.eot");
+  src: url("../font/eot/BowlbyOne-Regular.eot?#iefix") format("vwbedded-opentype"), url("../font/woff/BowlbyOne-Regular.woff") format("woff"), url("../font/ttf/BowlbyOne-Regular.ttf") format("truetype"), url("../font/svg/BowlbyOne-Regular.svg#JournalRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Intro Cond Black";
+  src: url("../font/eot/Intro Cond Black Free.eot");
+  src: url("../font/eot/Intro Cond Black Free.eot?#iefix") format("vwbedded-opentype"), url("../font/woff/Intro-Cond-Black-Free.woff") format("woff"), url("../font/ttf/Intro Cond Black Free.ttf") format("truetype"), url("../font/svg/Intro Cond Black Free.svg#JournalRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Font connnect END*/
+html {
+  font-size: 100%; }
+
+.nav {
+  /*  ширна произвольная, не стесняйтесь экспериментировать */
+  width: 320px;
+  width: 20rem;
+  min-width: 320px;
+  /* фиксируем и выставляем высоту панели на максимум */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  /* сдвигаем (прячем) панель относительно левого края страницы */
+  left: -101%;
+  /* внутренние отступы */
+  padding: 0;
+  /* плавный переход смещения панели */
+  transition: left 0.3s;
+  /* определяем цвет фона панели */
+  background: #640208;
+  /* поверх других элементов */
+  z-index: 2000; }
+
+/**
+ * Кнопка переключения панели
+ * тег <label>
+ */
+.nav-toggle {
+  /* абсолютно позиционируем */
+  position: static;
+  /* относительно левого края панели */
+  left: 101vw;
+  /* отступ от верхнего края панели */
+  top: 0;
+  /* внутренние отступы */
+  padding: 8px;
+  padding: 0.5rem;
+  /* определяем цвет фона переключателя
+   * чаще вчего в соответствии с цветом фона панели
+  */
+  background: inherit;
+  /* цвет текста */
+  color: orangered;
+  /* вид курсора */
+  cursor: pointer;
+  /* размер шрифта */
+  font-size: 1.2em;
+  line-height: 1;
+  /* всегда поверх других элементов страницы */
+  z-index: 2001;
+  /* анимируем цвет текста при наведении */
+  transition: color .25s ease-in-out; }
+
+/* определяем текст кнопки
+ * символ Unicode (TRIGRAM FOR HEAVEN)
+*/
+.nav-toggle:after {
+  content: '\2630';
+  text-decoration: none; }
+
+/* цвет текста при наведении */
+.nav-toggle:hover {
+  color: black; }
+
+/**
+ * Скрытый чекбокс (флажок)
+ * невидим и недоступен :)
+ * имя селектора атрибут флажка
+ */
+[id='nav-toggle'] {
+  position: static;
+  display: none; }
+
+/**
+ * изменение положения переключателя
+ * при просмотре на мобильных устройствах
+ * когда навигация раскрыта, распологаем внутри панели
+*/
+[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+  left: auto;
+  right: 2px;
+  top: 0; }
+
+/**
+ * Когда флажок установлен, открывается панель
+ * используем псевдокласс:checked
+ */
+[id='nav-toggle']:checked ~ .nav {
+  left: 0;
+  overflow-y: auto; }
+
+/*
+ * смещение контента страницы
+ * на размер ширины панели,
+ * фишка необязательная, на любителя
+*/
+[id='nav-toggle']:checked ~ main > article {
+  -webkit-transform: translateX(320px);
+  transform: translateX(320px); }
+
+/*
+ * изменение символа переключателя,
+ * привычный крестик (MULTIPLICATION X),
+ * вы можете испльзовать любой другой значок
+*/
+[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
+  content: '\2715'; }
+
+/**
+ * профиксим баг в Android <= 4.1.2
+ * см: http://timpietrusky.com/advanced-checkbox-hack
+ */
+body {
+  -webkit-animation: bugfix infinite 1s; }
+
+@-webkit-keyframes bugfix {
+  to {
+    padding: 0; } }
+/**
+ * Формируем стиль заголовка (логотип) панели
+*/
+.logo {
+  background-color: #BA010E; }
+
+.nav > h2 {
+  height: 3em;
+  width: 80%;
+  text-align: center;
+  font-size: 32px;
+  font-size: 2rem;
+  margin-left: 10%;
+  margin-top: 10%;
+  padding-top: .75em;
+  padding-left: .5em;
+  display: block;
+  position: static; }
+
+.nav > h2 > a {
+  color: #dadada;
+  font-family: "BowlbyOne Regular", serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block; }
+
+/**
+ * формируем непосредственно само меню
+ * используем неупорядоченный список для пунктов меню
+ * прикрутим трансфомации и плавные переходы
+ */
+.nav > .box {
+  width: 80%;
+  height: 13em;
+  min-height: 240px;
+  background-color: #ba010e;
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  margin: 0;
+  margin-left: 10%;
+  margin-top: 1%;
+  padding: 0;
+  left: 0;
+  padding-top: 1em; }
+
+.nav > .box > ul {
+  display: block;
+  list-style: none;
+  padding: 0; }
+
+.nav > .box > ul > li {
+  border-radius: 2px;
+  background-color: #FE5958;
+  text-align: center;
+  width: 96%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  height: 15%;
+  padding: 0; }
+
+/**
+ * оформление ссылок пунктов меню
+ */
+.nav > .box > ul > li > a {
+  display: inline-block;
+  padding: 0;
+  font-family: "Intro Cond Black", serif;
+  font-weight: 300;
+  color: #dadada;
+  width: 100%;
+  text-decoration: none;
+  /* плавный переход */
+  transition: color .5s ease, padding .5s ease;
+  vertical-align: middle; }
+
+/**
+ * состояние ссылок меню при наведении
+ */
+.nav > .box > ul > li > a:hover,
+.nav > .box > ul > li > a:focus {
+  color: black;
+  padding-left: 15px; }
+
+/**
+ * линия подчеркивания ссылок меню
+ */
+/*
+.nav > .box > ul > li > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+.nav > .box > ul > li > a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #3bc1a0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+*/
+/**
+ * анимируем линию подчеркивания
+ * ссылок при наведении
+ */
+/*
+.nav > .box > ul > li > a:hover:before {
+    width: 0;
+    background: #3bc1a0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.nav > .box > ul > li > a:hover:after {
+    width: 0;
+    background: transparent;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+*/
+nav > form {
+  width: 80%;
+  height: 20em;
+  background-color: #BA010E;
+  left: 0;
+  margin-left: 10%;
+  margin-top: 5%;
+  min-height: 240px;
+  font-size: 16px;
+  font-size: 1rem;
+  color: white;
+  display: block;
+  padding: 0;
+  padding-top: 1em;
+  padding-left: 1em; }
+
+nav > form > .form-group > label, nav > form > .time > label {
+  margin: 0;
+  padding: 0; }
+
+nav > form > .form-group, nav > form > .time {
+  width: 90%;
+  height: 15%;
+  margin-bottom: 12%; }
+
+nav > form > .form-group > input, nav > form > .time > input {
+  height: 100%;
+  width: 100%; }
+
+nav > form > button {
+  min-height: 35px;
+  height: 15%;
+  width: 60%;
+  left: 20%;
+  font-size: 16px;
+  font-size: 1rem;
+  bottom: 2.5%; }
+
+button > a {
+  font-size: 1em; }
+
+/* фон затемнения на основной контент
+ * при этом элементы блокируютя
+ * спорная такая фича, если оно вам надо
+ * просто раскомментируйте
+*/
+/*
+.mask-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+}
+
+[id='nav-toggle']:checked ~ .mask-content {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity .5s, visibility .5s;
+    transition: opacity .5s, visibility .5s;
+}
+*/
+.nav-toggle {
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100px; }
+
+.logo {
+  width: 100%;
+  margin-bottom: 5%;
+  height: 10%;
+  padding: 10%; }
+
+/**
+ * позаботьтимся о средних и маленьких экранах
+ * мобильных устройств
+ */
+@media screen and (min-width: 320px) {
+  html,
+  body {
+    margin: 0;
+    overflow-x: hidden; } }
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    margin: 0;
+    overflow-x: hidden; }
+
+  .nav {
+    width: 100%;
+    box-shadow: none; } }
+/*
+    bootstrap
+*/
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.font-size {
+  font-size: 100%; }
+
+
