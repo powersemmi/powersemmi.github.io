@@ -1,1 +1,0 @@
-# powersemmi.github.io
