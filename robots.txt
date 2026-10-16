@@ -1,0 +1,8 @@
+# Every crawler may read every page, search engines and AI crawlers alike (GPTBot,
+# OAI-SearchBot, ClaudeBot, Claude-SearchBot, Google-Extended, PerplexityBot and the rest).
+# Pages that should stay out of search results say so themselves with a noindex tag, which a
+# crawler can only see when it is allowed to fetch the page.
+User-agent: *
+Allow: /
+
+Sitemap: https://powersemmi.github.io/ruststream/latest/sitemap.xml
