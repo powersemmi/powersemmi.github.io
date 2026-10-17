@@ -5,4 +5,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://powersemmi.github.io/ruststream/latest/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream/sitemap.xml
