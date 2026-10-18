@@ -6,3 +6,16 @@ User-agent: *
 Allow: /
 
 Sitemap: https://powersemmi.github.io/ruststream/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-nats/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-fred/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-lapin/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-rdkafka/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-amqp/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-gcp-pubsub/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-sqs-sns/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-pulsar/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-rumqttc/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-zeromq/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-sea-file/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-kinesis/sitemap.xml
+Sitemap: https://powersemmi.github.io/ruststream-sqlx/sitemap.xml
